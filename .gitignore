@@ -15,3 +15,5 @@ Archieve/
 *.cb2
 .*.lb
 __latexindent_temp.*
+*.fdb_latexmk
+*.gz

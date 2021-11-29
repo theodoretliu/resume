@@ -44,22 +44,22 @@
 \newcommand{\resumeItem}[2]{
   \item\small{
     \textbf{#1}{: #2}
-  }\vspace{-4pt}
+  }
 }
 
 % Just in case someone needs a heading that does not need to be in a list
-\newcommand{\resumeHeading}[4]{
-    \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
+% \newcommand{\resumeHeading}[4]{
+%     \begin{tabular*}{0.99\textwidth}[t]{l@{\extracolsep{\fill}}r}
+%       \textbf{#1} & #2 \\
+%       \textit{\small#3} & \textit{\small #4} \\
+%     \end{tabular*}\vspace{-5pt}
+% }
 
 \newcommand{\resumeSubheading}[4]{
   \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}X}
     \textbf{#1} & #2 \\
     \textit{\small#3} & \textit{\small #4} \\
-  \end{tabularx}\vspace{-3pt}
+  \end{tabularx} % \vspace{-3pt}
 }
 
 % \newcommand{\resumeSubSubheading}[2]{
@@ -74,7 +74,8 @@
 
 \newcommand{\resumeSubHeadingListStart}{}
 \newcommand{\resumeSubHeadingListEnd}{}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}
+  \setlength\itemsep{0pt}}
 \newcommand{\resumeItemListEnd}{\end{itemize}}
 
 %-------------------------------------------
@@ -151,7 +152,7 @@
       {Datamatch}{Cambridge, CA}
       {Director}{Mar 2018 - Mar 2020}
       \resumeItemListStart
-        \item \small{Oversaw and managed the Datamatch organization – interfaced with teams at over a dozen colleges/universities, made deals with local businesses, and directed an engineering team of 10 people. In 2019, Datamatch was taken at 14 colleges and universities and had over 25,000 users}
+        \item \small{Oversaw and managed the Datamatch organization – interfaced with teams at over a dozen colleges/universities, made deals with local businesses, and directed an engineering team of 10 people. In 2019, Datamatch was taken at 14 colleges and universities and had over 25,000 users.}
       \resumeItemListEnd
 
 
@@ -159,8 +160,8 @@
       {Harvard University}{Cambridge, MA}
       {Teaching Fellow}{Sep 2017 - May 2020}
       \resumeItemListStart
-        \item \small{Worked as a teaching fellow for CS 153: Compilers; CS 181: Machine Learning; CS 61: Systems Programming; CS 51: Functional Programming and Abstraction; CS 50: Introduction to Computer Science.}\vspace{-2pt}
-        \item \small{Led sections, taught students about new concepts; held office hours to assist students on homework; graded homework, exams.}\vspace{-2pt}
+        \item \small{Worked as a teaching fellow for CS 153: Compilers; CS 181: Machine Learning; CS 61: Systems Programming; CS 51: Functional Programming and Abstraction; CS 50: Introduction to Computer Science.}
+        \item \small{Led sections, taught students about new concepts; held office hours to assist students on homework; graded homework, exams.}
 
       \resumeItemListEnd
 
@@ -170,6 +171,7 @@
 \section{Projects}
   \resumeSubHeadingListStart
   \begin{itemize}
+    \setlength\itemsep{0em}
     \resumeSubItem{Kipp}
       {Slackbot to fetch images from Google Image Search. Website at \href{https://fetchkipp.com/}{https://fetchkipp.com/}.}
 
