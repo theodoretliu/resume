@@ -6,6 +6,7 @@
 
 \documentclass[10pt]{article}
 
+% \usepackage{tabularx}
 \usepackage[letterpaper, margin=0.5in]{geometry}
 \usepackage{latexsym}
 % \usepackage[empty]{fullpage}
@@ -32,8 +33,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-8pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-12pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule\vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -43,7 +44,7 @@
 \newcommand{\resumeItem}[2]{
   \item\small{
     \textbf{#1}{: #2}
-  }
+  }\vspace{-4pt}
 }
 
 % Just in case someone needs a heading that does not need to be in a list
@@ -55,27 +56,26 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+  \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}X >{\raggedleft\arraybackslash}X}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} & \textit{\small #4} \\
+  \end{tabularx}\vspace{-3pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-5pt}
-}
+% \newcommand{\resumeSubSubheading}[2]{
+%     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+%       \textit{\small#1} & \textit{\small #2} \\
+%     \end{tabular*}\vspace{-5pt}
+% }
 
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}}
 
-\renewcommand{\labelitemii}{$\circ$}
+% \renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubHeadingListStart}{}
+\newcommand{\resumeSubHeadingListEnd}{}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -134,18 +134,8 @@
       {Capital One}{Schaumburg, IL}
       {Associate Software Engineer}{Jun - Aug 2017}
       \resumeItemListStart
-        \item \small{Automated the creation and upload of files necessary for auditing purposes using Node; deployed with AWS Lambda and Cloudwatch; reduces 20-minute task to 10 seconds. Completely rewrote an outdated and overengineered Java Server Pages application using React, Redux, and Express; tremendously simplified build and deploy process. Built proof-of-concept login flow using React, Redux, and AWS Rekognition}
+        \item \small{Automated the creation and upload of files necessary for auditing purposes using Node; deployed with AWS Lambda and Cloudwatch; reduces 20-minute task to 10 seconds. Completely rewrote an outdated and overengineered Java Server Pages application using React, Redux, and Express; tremendously simplified build and deploy process. Built proof-of-concept login flow using React, Redux, and AWS Rekognition}\vspace{-2pt}
       \resumeItemListEnd
-
-% --------Multiple Positions Heading------------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
   \resumeSubHeadingListEnd
 
 \section{Activities}
@@ -169,8 +159,8 @@
       {Harvard University}{Cambridge, MA}
       {Teaching Fellow}{Sep 2017 - May 2020}
       \resumeItemListStart
-        \item \small{Worked as a teaching fellow for CS 153: Compilers; CS 181: Machine Learning; CS 61: Systems Programming; CS 51: Functional Programming and Abstraction; CS 50: Introduction to Computer Science.}
-        \item \small{Led sections, taught students about new concepts; held office hours to assist students on homework; graded homework, exams.}
+        \item \small{Worked as a teaching fellow for CS 153: Compilers; CS 181: Machine Learning; CS 61: Systems Programming; CS 51: Functional Programming and Abstraction; CS 50: Introduction to Computer Science.}\vspace{-2pt}
+        \item \small{Led sections, taught students about new concepts; held office hours to assist students on homework; graded homework, exams.}\vspace{-2pt}
 
       \resumeItemListEnd
 
@@ -179,6 +169,7 @@
 %-----------PROJECTS-----------------
 \section{Projects}
   \resumeSubHeadingListStart
+  \begin{itemize}
     \resumeSubItem{Kipp}
       {Slackbot to fetch images from Google Image Search. Website at \href{https://fetchkipp.com/}{https://fetchkipp.com/}.}
 
@@ -187,6 +178,7 @@
 
     \resumeSubItem{Languages and Technologies}
       {Ruby; Python; Javascript/Typescript; OCaml; C; Dart; Java; Flutter; React; Rails; GraphQL; Redux; Django}
+  \end{itemize}
   \resumeSubHeadingListEnd
 
 %-------------------------------------------
